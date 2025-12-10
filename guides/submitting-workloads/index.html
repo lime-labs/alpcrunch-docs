@@ -1,0 +1,2572 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.alpcrun.ch/guides/submitting-workloads/">
+      
+      
+        <link rel="prev" href="../writing-services/">
+      
+      
+        <link rel="next" href="../shared-data/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Submitting Workloads - Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-L635HJ9NNZ"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-L635HJ9NNZ",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-L635HJ9NNZ",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="black">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#submitting-workloads" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="../../assets/alpcrunch_logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Submitting Workloads
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="black"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="white"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="../../assets/alpcrunch_logo.svg" alt="logo">
+
+    </a>
+    Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Components
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/data-flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Flow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../writing-clients/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Writing Clients
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../writing-services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Writing Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Submitting Workloads
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Submitting Workloads
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#workload-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workload Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workload Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-1-embarrassingly-parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 1: Embarrassingly Parallel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-2-mapreduce" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 2: MapReduce
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-3-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 3: Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-4-dynamic-task-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 4: Dynamic Task Generation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-5-iterative-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 5: Iterative Convergence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batching-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batching Strategies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Batching Strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixed-size-batching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixed-Size Batching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-based-batching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Time-Based Batching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptive-batching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adaptive Batching
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Priority Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Priority Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-priorities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task Priorities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-priorities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Session Priorities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flow-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flow Control
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flow Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rate-limiting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rate Limiting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backpressure-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backpressure Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxinflightbatchesperworker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MaxInflightBatchesPerWorker
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result Handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Result Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ordered-result-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ordered Result Collection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streaming-result-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Streaming Result Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result Aggregation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retry-failed-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retry Failed Tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dead-letter-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dead Letter Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-example-parameter-sweep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Example: Parameter Sweep
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using Shared Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../error-handling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Error Handling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/message-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Message Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/simple-client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simple Client
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/worker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Worker Implementation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/monte-carlo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monte Carlo Pi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#workload-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workload Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workload Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pattern-1-embarrassingly-parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 1: Embarrassingly Parallel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-2-mapreduce" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 2: MapReduce
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-3-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 3: Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-4-dynamic-task-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 4: Dynamic Task Generation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-5-iterative-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pattern 5: Iterative Convergence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batching-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Batching Strategies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Batching Strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixed-size-batching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixed-Size Batching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-based-batching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Time-Based Batching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptive-batching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adaptive Batching
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priority-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Priority Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Priority Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-priorities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task Priorities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-priorities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Session Priorities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flow-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flow Control
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flow Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rate-limiting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rate Limiting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backpressure-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backpressure Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxinflightbatchesperworker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MaxInflightBatchesPerWorker
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#result-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result Handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Result Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ordered-result-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ordered Result Collection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streaming-result-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Streaming Result Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result-aggregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result Aggregation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retry-failed-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retry Failed Tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dead-letter-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dead Letter Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-example-parameter-sweep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete Example: Parameter Sweep
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="submitting-workloads">Submitting Workloads<a class="headerlink" href="#submitting-workloads" title="Permanent link">&para;</a></h1>
+<p>This guide covers advanced patterns and best practices for submitting workloads to ALPCRUN.CH.</p>
+<h2 id="workload-patterns">Workload Patterns<a class="headerlink" href="#workload-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="pattern-1-embarrassingly-parallel">Pattern 1: Embarrassingly Parallel<a class="headerlink" href="#pattern-1-embarrassingly-parallel" title="Permanent link">&para;</a></h3>
+<p>The simplest pattern - independent tasks with no dependencies.</p>
+<p><strong>Use Cases</strong>: Monte Carlo simulations, parameter sweeps, batch processing</p>
+<p><strong>Implementation</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// Generate all tasks upfront</span>
+<span class="nx">tasks</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">generateTasks</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
+
+<span class="c1">// Send all tasks</span>
+<span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">task</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">tasks</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">batch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Batch</span><span class="p">{</span>
+<span class="w">        </span><span class="nx">SessionId</span><span class="p">:</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">Messages</span><span class="p">:</span><span class="w">  </span><span class="p">[]</span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Message</span><span class="p">{{</span><span class="nx">Id</span><span class="p">:</span><span class="w"> </span><span class="nx">task</span><span class="p">.</span><span class="nx">ID</span><span class="p">,</span><span class="w"> </span><span class="nx">Payload</span><span class="p">:</span><span class="w"> </span><span class="nx">task</span><span class="p">.</span><span class="nx">Data</span><span class="p">}},</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">stream</span><span class="p">.</span><span class="nx">Send</span><span class="p">(</span><span class="nx">batch</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// Collect all results</span>
+<span class="nx">results</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">collectResults</span><span class="p">(</span><span class="nx">stream</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">tasks</span><span class="p">))</span>
+</code></pre></div>
+
+<p><strong>Characteristics</strong>:
+- No shared state needed
+- Perfect scalability
+- Simple result aggregation</p>
+<h3 id="pattern-2-mapreduce">Pattern 2: MapReduce<a class="headerlink" href="#pattern-2-mapreduce" title="Permanent link">&para;</a></h3>
+<p>Two-phase processing: map tasks followed by reduce.</p>
+<p><strong>Use Cases</strong>: Data aggregation, distributed sorting, word count</p>
+<p><strong>Implementation</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// Phase 1: Map</span>
+<span class="nx">mapTasks</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">splitDataIntoChunks</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
+<span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">chunk</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">mapTasks</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">batch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Batch</span><span class="p">{</span>
+<span class="w">        </span><span class="nx">SessionId</span><span class="p">:</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">Priority</span><span class="p">:</span><span class="w">  </span><span class="mi">1</span><span class="p">,</span><span class="w">  </span><span class="c1">// Higher priority for map phase</span>
+<span class="w">        </span><span class="nx">Messages</span><span class="p">:</span><span class="w">  </span><span class="p">[]</span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Message</span><span class="p">{{</span><span class="nx">Id</span><span class="p">:</span><span class="w"> </span><span class="nx">chunk</span><span class="p">.</span><span class="nx">ID</span><span class="p">,</span><span class="w"> </span><span class="nx">Payload</span><span class="p">:</span><span class="w"> </span><span class="nx">chunk</span><span class="p">.</span><span class="nx">Data</span><span class="p">}},</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">stream</span><span class="p">.</span><span class="nx">Send</span><span class="p">(</span><span class="nx">batch</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// Collect map results</span>
+<span class="nx">mapResults</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">collectResults</span><span class="p">(</span><span class="nx">stream</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">mapTasks</span><span class="p">))</span>
+
+<span class="c1">// Phase 2: Reduce</span>
+<span class="nx">reduceTasks</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">groupMapResults</span><span class="p">(</span><span class="nx">mapResults</span><span class="p">)</span>
+<span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">group</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">reduceTasks</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">batch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Batch</span><span class="p">{</span>
+<span class="w">        </span><span class="nx">SessionId</span><span class="p">:</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">Priority</span><span class="p">:</span><span class="w">  </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">Messages</span><span class="p">:</span><span class="w">  </span><span class="p">[]</span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Message</span><span class="p">{{</span><span class="nx">Id</span><span class="p">:</span><span class="w"> </span><span class="nx">group</span><span class="p">.</span><span class="nx">ID</span><span class="p">,</span><span class="w"> </span><span class="nx">Payload</span><span class="p">:</span><span class="w"> </span><span class="nx">group</span><span class="p">.</span><span class="nx">Data</span><span class="p">}},</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">stream</span><span class="p">.</span><span class="nx">Send</span><span class="p">(</span><span class="nx">batch</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// Collect final results</span>
+<span class="nx">finalResult</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">collectResults</span><span class="p">(</span><span class="nx">stream</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">reduceTasks</span><span class="p">))</span>
+</code></pre></div>
+
+<p><strong>Optimization</strong>:
+Use two separate sessions for better control:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// Map session with many workers</span>
+<span class="nx">mapSession</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">createSession</span><span class="p">(</span><span class="nx">priority</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nx">maxWorkers</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1">// Reduce session with fewer workers</span>
+<span class="nx">reduceSession</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">createSession</span><span class="p">(</span><span class="nx">priority</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nx">maxWorkers</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="pattern-3-pipeline">Pattern 3: Pipeline<a class="headerlink" href="#pattern-3-pipeline" title="Permanent link">&para;</a></h3>
+<p>Multi-stage processing where output of one stage feeds the next.</p>
+<p><strong>Use Cases</strong>: Image processing pipelines, data transformation chains</p>
+<p><strong>Implementation</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// Stage 1: Preprocessing</span>
+<span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">input</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">inputs</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">sendTask</span><span class="p">(</span><span class="nx">stream</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;preprocess&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">input</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nx">stage1Results</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="o">*</span><span class="nx">Result</span><span class="p">)</span>
+
+<span class="c1">// As stage 1 completes, feed into stage 2</span>
+<span class="k">for</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">receiveResults</span><span class="p">(</span><span class="nx">stream</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">stage1Results</span><span class="p">[</span><span class="nx">result</span><span class="p">.</span><span class="nx">Id</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">result</span>
+
+<span class="w">    </span><span class="c1">// Send to stage 2</span>
+<span class="w">    </span><span class="nx">stage2Task</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">prepareStage2</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">sendTask</span><span class="p">(</span><span class="nx">stream</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;process&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">stage2Task</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// Continue through stages...</span>
+</code></pre></div>
+
+<p><strong>Multi-Session Pipeline</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// Create sessions for each stage</span>
+<span class="nx">preprocess</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">createSession</span><span class="p">(</span><span class="s">&quot;preprocess&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
+<span class="nx">process</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">createSession</span><span class="p">(</span><span class="s">&quot;process&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span>
+<span class="nx">postprocess</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">createSession</span><span class="p">(</span><span class="s">&quot;postprocess&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span>
+
+<span class="c1">// Connect stages</span>
+<span class="k">go</span><span class="w"> </span><span class="kd">func</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">stage1Results</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">sendTaskToSession</span><span class="p">(</span><span class="nx">processSession</span><span class="p">,</span><span class="w"> </span><span class="nx">result</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}()</span>
+
+<span class="k">go</span><span class="w"> </span><span class="kd">func</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">stage2Results</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">sendTaskToSession</span><span class="p">(</span><span class="nx">postprocessSession</span><span class="p">,</span><span class="w"> </span><span class="nx">result</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}()</span>
+</code></pre></div>
+
+<h3 id="pattern-4-dynamic-task-generation">Pattern 4: Dynamic Task Generation<a class="headerlink" href="#pattern-4-dynamic-task-generation" title="Permanent link">&para;</a></h3>
+<p>Generate new tasks based on results.</p>
+<p><strong>Use Cases</strong>: Tree search, adaptive sampling, iterative refinement</p>
+<p><strong>Implementation</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// Seed initial tasks</span>
+<span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">seed</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">seeds</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">sendTask</span><span class="p">(</span><span class="nx">stream</span><span class="p">,</span><span class="w"> </span><span class="nx">seed</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nx">totalTasks</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">seeds</span><span class="p">)</span>
+<span class="nx">completedTasks</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span>
+
+<span class="k">for</span><span class="w"> </span><span class="nx">completedTasks</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="nx">totalTasks</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">result</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&lt;-</span><span class="nx">receiveResults</span><span class="p">(</span><span class="nx">stream</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">completedTasks</span><span class="o">++</span>
+
+<span class="w">    </span><span class="c1">// Analyze result and potentially generate more work</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">needsRefinement</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">newTasks</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">generateRefinementTasks</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">task</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">newTasks</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">sendTask</span><span class="p">(</span><span class="nx">stream</span><span class="p">,</span><span class="w"> </span><span class="nx">task</span><span class="p">)</span>
+<span class="w">            </span><span class="nx">totalTasks</span><span class="o">++</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>With Depth Limit</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">type</span><span class="w"> </span><span class="nx">Task</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">ID</span><span class="w">    </span><span class="kt">string</span>
+<span class="w">    </span><span class="nx">Data</span><span class="w">  </span><span class="p">[]</span><span class="kt">byte</span>
+<span class="w">    </span><span class="nx">Depth</span><span class="w"> </span><span class="kt">int</span>
+<span class="p">}</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">maxDepth</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">5</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">result</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&lt;-</span><span class="nx">resultsChan</span>
+<span class="w">    </span><span class="nx">task</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">tasks</span><span class="p">[</span><span class="nx">result</span><span class="p">.</span><span class="nx">Id</span><span class="p">]</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">task</span><span class="p">.</span><span class="nx">Depth</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="nx">maxDepth</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">needsMore</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">newTasks</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">expand</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">newTask</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">newTasks</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">newTask</span><span class="p">.</span><span class="nx">Depth</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">task</span><span class="p">.</span><span class="nx">Depth</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">            </span><span class="nx">sendTask</span><span class="p">(</span><span class="nx">stream</span><span class="p">,</span><span class="w"> </span><span class="nx">newTask</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="pattern-5-iterative-convergence">Pattern 5: Iterative Convergence<a class="headerlink" href="#pattern-5-iterative-convergence" title="Permanent link">&para;</a></h3>
+<p>Repeat computation until convergence criteria met.</p>
+<p><strong>Use Cases</strong>: Optimization algorithms, machine learning training, numerical methods</p>
+<p><strong>Implementation</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nx">iteration</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span>
+<span class="nx">converged</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kc">false</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">!</span><span class="nx">converged</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">iteration</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="nx">maxIterations</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Send tasks for this iteration</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">task</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">tasks</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">task</span><span class="p">.</span><span class="nx">Iteration</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">iteration</span>
+<span class="w">        </span><span class="nx">sendTask</span><span class="p">(</span><span class="nx">stream</span><span class="p">,</span><span class="w"> </span><span class="nx">task</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Collect results</span>
+<span class="w">    </span><span class="nx">results</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">collectResults</span><span class="p">(</span><span class="nx">stream</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">tasks</span><span class="p">))</span>
+
+<span class="w">    </span><span class="c1">// Check convergence</span>
+<span class="w">    </span><span class="nx">converged</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">checkConvergence</span><span class="p">(</span><span class="nx">results</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c1">// Update tasks for next iteration</span>
+<span class="w">    </span><span class="nx">tasks</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">updateTasks</span><span class="p">(</span><span class="nx">tasks</span><span class="p">,</span><span class="w"> </span><span class="nx">results</span><span class="p">)</span>
+
+<span class="w">    </span><span class="nx">iteration</span><span class="o">++</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>With Shared State Updates</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nx">updateLevel</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">uint32</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="k">for</span><span class="w"> </span><span class="nx">iteration</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="nx">iteration</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="nx">maxIterations</span><span class="p">;</span><span class="w"> </span><span class="nx">iteration</span><span class="o">++</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Update shared parameters</span>
+<span class="w">    </span><span class="nx">updateLevel</span><span class="o">++</span>
+<span class="w">    </span><span class="nx">sharedParams</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">computeSharedParams</span><span class="p">(</span><span class="nx">results</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">cacheClient</span><span class="p">.</span><span class="nx">UpdateSharedData</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">SharedData</span><span class="p">{</span>
+<span class="w">        </span><span class="nx">SessionId</span><span class="p">:</span><span class="w">   </span><span class="nx">session</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">UpdateLevel</span><span class="p">:</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">updateLevel</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">Payload</span><span class="p">:</span><span class="w">     </span><span class="nx">sharedParams</span><span class="p">,</span>
+<span class="w">    </span><span class="p">})</span>
+
+<span class="w">    </span><span class="c1">// Send tasks referencing new shared data</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">task</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">tasks</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">batch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Batch</span><span class="p">{</span>
+<span class="w">            </span><span class="nx">SessionId</span><span class="p">:</span><span class="w">                     </span><span class="nx">session</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">UseSharedData</span><span class="p">:</span><span class="w">                 </span><span class="nx">proto</span><span class="p">.</span><span class="nx">Bool</span><span class="p">(</span><span class="kc">true</span><span class="p">),</span>
+<span class="w">            </span><span class="nx">RequiredSharedDataUpdateLevel</span><span class="p">:</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">updateLevel</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">Messages</span><span class="p">:</span><span class="w">                      </span><span class="p">[]</span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Message</span><span class="p">{</span><span class="nx">task</span><span class="p">},</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nx">stream</span><span class="p">.</span><span class="nx">Send</span><span class="p">(</span><span class="nx">batch</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nx">results</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">collectResults</span><span class="p">(</span><span class="nx">stream</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">tasks</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="batching-strategies">Batching Strategies<a class="headerlink" href="#batching-strategies" title="Permanent link">&para;</a></h2>
+<h3 id="fixed-size-batching">Fixed-Size Batching<a class="headerlink" href="#fixed-size-batching" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">batchSize</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">100</span>
+
+<span class="nx">messages</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Message</span><span class="p">{}</span>
+<span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">task</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">tasks</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">messages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">messages</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Message</span><span class="p">{</span>
+<span class="w">        </span><span class="nx">Id</span><span class="p">:</span><span class="w">      </span><span class="nx">task</span><span class="p">.</span><span class="nx">ID</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">Payload</span><span class="p">:</span><span class="w"> </span><span class="nx">task</span><span class="p">.</span><span class="nx">Data</span><span class="p">,</span>
+<span class="w">    </span><span class="p">})</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">messages</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="nx">batchSize</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">stream</span><span class="p">.</span><span class="nx">Send</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Batch</span><span class="p">{</span>
+<span class="w">            </span><span class="nx">SessionId</span><span class="p">:</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">Messages</span><span class="p">:</span><span class="w">  </span><span class="nx">messages</span><span class="p">,</span>
+<span class="w">        </span><span class="p">})</span>
+<span class="w">        </span><span class="nx">messages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Message</span><span class="p">{}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Send remaining</span>
+<span class="k">if</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">messages</span><span class="p">)</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">stream</span><span class="p">.</span><span class="nx">Send</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Batch</span><span class="p">{</span><span class="nx">SessionId</span><span class="p">:</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span><span class="w"> </span><span class="nx">Messages</span><span class="p">:</span><span class="w"> </span><span class="nx">messages</span><span class="p">})</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="time-based-batching">Time-Based Batching<a class="headerlink" href="#time-based-batching" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">batchInterval</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Millisecond</span>
+
+<span class="nx">messages</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Message</span><span class="p">{}</span>
+<span class="nx">timer</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">NewTimer</span><span class="p">(</span><span class="nx">batchInterval</span><span class="p">)</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="nx">task</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&lt;-</span><span class="nx">taskChan</span><span class="p">:</span>
+<span class="w">        </span><span class="nx">messages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">messages</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Message</span><span class="p">{</span>
+<span class="w">            </span><span class="nx">Id</span><span class="p">:</span><span class="w">      </span><span class="nx">task</span><span class="p">.</span><span class="nx">ID</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">Payload</span><span class="p">:</span><span class="w"> </span><span class="nx">task</span><span class="p">.</span><span class="nx">Data</span><span class="p">,</span>
+<span class="w">        </span><span class="p">})</span>
+
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="o">&lt;-</span><span class="nx">timer</span><span class="p">.</span><span class="nx">C</span><span class="p">:</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">messages</span><span class="p">)</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">stream</span><span class="p">.</span><span class="nx">Send</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Batch</span><span class="p">{</span><span class="nx">SessionId</span><span class="p">:</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span><span class="w"> </span><span class="nx">Messages</span><span class="p">:</span><span class="w"> </span><span class="nx">messages</span><span class="p">})</span>
+<span class="w">            </span><span class="nx">messages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Message</span><span class="p">{}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nx">timer</span><span class="p">.</span><span class="nx">Reset</span><span class="p">(</span><span class="nx">batchInterval</span><span class="p">)</span>
+
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="o">&lt;-</span><span class="nx">doneChan</span><span class="p">:</span>
+<span class="w">        </span><span class="c1">// Flush remaining</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">messages</span><span class="p">)</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">stream</span><span class="p">.</span><span class="nx">Send</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Batch</span><span class="p">{</span><span class="nx">SessionId</span><span class="p">:</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span><span class="w"> </span><span class="nx">Messages</span><span class="p">:</span><span class="w"> </span><span class="nx">messages</span><span class="p">})</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="adaptive-batching">Adaptive Batching<a class="headerlink" href="#adaptive-batching" title="Permanent link">&para;</a></h3>
+<p>Adjust batch size based on throughput:</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">adaptiveBatcher</span><span class="p">(</span><span class="nx">stream</span><span class="w"> </span><span class="nx">pb</span><span class="p">.</span><span class="nx">Queue_ClientStreamClient</span><span class="p">,</span><span class="w"> </span><span class="nx">taskChan</span><span class="w"> </span><span class="o">&lt;-</span><span class="kd">chan</span><span class="w"> </span><span class="nx">Task</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">minBatchSize</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">10</span>
+<span class="w">    </span><span class="nx">maxBatchSize</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">1000</span>
+<span class="w">    </span><span class="nx">currentBatchSize</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">100</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">messages</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Message</span><span class="p">{}</span>
+<span class="w">        </span><span class="nx">start</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">()</span>
+
+<span class="w">        </span><span class="c1">// Collect messages up to current batch size</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">messages</span><span class="p">)</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="nx">currentBatchSize</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">select</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="nx">task</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&lt;-</span><span class="nx">taskChan</span><span class="p">:</span>
+<span class="w">                </span><span class="nx">messages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">messages</span><span class="p">,</span><span class="w"> </span><span class="nx">taskToMessage</span><span class="p">(</span><span class="nx">task</span><span class="p">))</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="o">&lt;-</span><span class="nx">time</span><span class="p">.</span><span class="nx">After</span><span class="p">(</span><span class="mi">10</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Millisecond</span><span class="p">):</span>
+<span class="w">                </span><span class="k">break</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Send batch</span>
+<span class="w">        </span><span class="nx">stream</span><span class="p">.</span><span class="nx">Send</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Batch</span><span class="p">{</span><span class="nx">SessionId</span><span class="p">:</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span><span class="w"> </span><span class="nx">Messages</span><span class="p">:</span><span class="w"> </span><span class="nx">messages</span><span class="p">})</span>
+
+<span class="w">        </span><span class="c1">// Adjust batch size based on latency</span>
+<span class="w">        </span><span class="nx">latency</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Since</span><span class="p">(</span><span class="nx">start</span><span class="p">)</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">latency</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="o">*</span><span class="nx">time</span><span class="p">.</span><span class="nx">Millisecond</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">currentBatchSize</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">min</span><span class="p">(</span><span class="nx">currentBatchSize</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nx">maxBatchSize</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">latency</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="mi">100</span><span class="o">*</span><span class="nx">time</span><span class="p">.</span><span class="nx">Millisecond</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">currentBatchSize</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="nx">currentBatchSize</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nx">minBatchSize</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="priority-management">Priority Management<a class="headerlink" href="#priority-management" title="Permanent link">&para;</a></h2>
+<h3 id="task-priorities">Task Priorities<a class="headerlink" href="#task-priorities" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1">// Critical tasks</span>
+<span class="nx">criticalBatch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Batch</span><span class="p">{</span>
+<span class="w">    </span><span class="nx">SessionId</span><span class="p">:</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">Priority</span><span class="p">:</span><span class="w">  </span><span class="mi">10</span><span class="p">,</span><span class="w">  </span><span class="c1">// Highest priority</span>
+<span class="w">    </span><span class="nx">Messages</span><span class="p">:</span><span class="w">  </span><span class="nx">criticalTasks</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1">// Normal tasks</span>
+<span class="nx">normalBatch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Batch</span><span class="p">{</span>
+<span class="w">    </span><span class="nx">SessionId</span><span class="p">:</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">Priority</span><span class="p">:</span><span class="w">  </span><span class="mi">5</span><span class="p">,</span><span class="w">   </span><span class="c1">// Medium priority</span>
+<span class="w">    </span><span class="nx">Messages</span><span class="p">:</span><span class="w">  </span><span class="nx">normalTasks</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1">// Background tasks</span>
+<span class="nx">backgroundBatch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Batch</span><span class="p">{</span>
+<span class="w">    </span><span class="nx">SessionId</span><span class="p">:</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">Priority</span><span class="p">:</span><span class="w">  </span><span class="mi">1</span><span class="p">,</span><span class="w">   </span><span class="c1">// Low priority</span>
+<span class="w">    </span><span class="nx">Messages</span><span class="p">:</span><span class="w">  </span><span class="nx">backgroundTasks</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="session-priorities">Session Priorities<a class="headerlink" href="#session-priorities" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1">// High priority session (gets workers first)</span>
+<span class="nx">urgentSession</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">createSession</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">SessionAttributes</span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Priority</span><span class="p">:</span><span class="w">    </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">MinWorkers</span><span class="p">:</span><span class="w">  </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">MaxWorkers</span><span class="p">:</span><span class="w">  </span><span class="mi">1000</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="c1">// Normal priority session</span>
+<span class="nx">normalSession</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">createSession</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">SessionAttributes</span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Priority</span><span class="p">:</span><span class="w">    </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">MinWorkers</span><span class="p">:</span><span class="w">  </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">MaxWorkers</span><span class="p">:</span><span class="w">  </span><span class="mi">100</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="c1">// Background session (uses spare capacity)</span>
+<span class="nx">backgroundSession</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">createSession</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">SessionAttributes</span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Priority</span><span class="p">:</span><span class="w">    </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">MinWorkers</span><span class="p">:</span><span class="w">  </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">MaxWorkers</span><span class="p">:</span><span class="w">  </span><span class="mi">50</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">Preemptible</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">  </span><span class="c1">// Can be interrupted</span>
+<span class="p">})</span>
+</code></pre></div>
+
+<h2 id="flow-control">Flow Control<a class="headerlink" href="#flow-control" title="Permanent link">&para;</a></h2>
+<h3 id="rate-limiting">Rate Limiting<a class="headerlink" href="#rate-limiting" title="Permanent link">&para;</a></h3>
+<p>Prevent overwhelming the system:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="s">&quot;golang.org/x/time/rate&quot;</span>
+
+<span class="c1">// Limit to 1000 tasks/second</span>
+<span class="nx">limiter</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">rate</span><span class="p">.</span><span class="nx">NewLimiter</span><span class="p">(</span><span class="nx">rate</span><span class="p">.</span><span class="nx">Limit</span><span class="p">(</span><span class="mi">1000</span><span class="p">),</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
+
+<span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">task</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">tasks</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Wait for rate limiter</span>
+<span class="w">    </span><span class="nx">limiter</span><span class="p">.</span><span class="nx">Wait</span><span class="p">(</span><span class="nx">ctx</span><span class="p">)</span>
+
+<span class="w">    </span><span class="nx">batch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Batch</span><span class="p">{</span>
+<span class="w">        </span><span class="nx">SessionId</span><span class="p">:</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">Messages</span><span class="p">:</span><span class="w">  </span><span class="p">[]</span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Message</span><span class="p">{</span><span class="nx">task</span><span class="p">},</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">stream</span><span class="p">.</span><span class="nx">Send</span><span class="p">(</span><span class="nx">batch</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="backpressure-handling">Backpressure Handling<a class="headerlink" href="#backpressure-handling" title="Permanent link">&para;</a></h3>
+<p>Monitor result rate and adjust sending:</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">type</span><span class="w"> </span><span class="nx">FlowController</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">sentTasks</span><span class="w">      </span><span class="nx">atomic</span><span class="p">.</span><span class="nx">Int64</span>
+<span class="w">    </span><span class="nx">receivedTasks</span><span class="w">  </span><span class="nx">atomic</span><span class="p">.</span><span class="nx">Int64</span>
+<span class="w">    </span><span class="nx">maxInflight</span><span class="w">    </span><span class="kt">int64</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">fc</span><span class="w"> </span><span class="o">*</span><span class="nx">FlowController</span><span class="p">)</span><span class="w"> </span><span class="nx">canSend</span><span class="p">()</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">inflight</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fc</span><span class="p">.</span><span class="nx">sentTasks</span><span class="p">.</span><span class="nx">Load</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">fc</span><span class="p">.</span><span class="nx">receivedTasks</span><span class="p">.</span><span class="nx">Load</span><span class="p">()</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">inflight</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="nx">fc</span><span class="p">.</span><span class="nx">maxInflight</span>
+<span class="p">}</span>
+
+<span class="c1">// Sender goroutine</span>
+<span class="k">go</span><span class="w"> </span><span class="kd">func</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">task</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">tasks</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Wait until we can send</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">!</span><span class="nx">flowController</span><span class="p">.</span><span class="nx">canSend</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">time</span><span class="p">.</span><span class="nx">Sleep</span><span class="p">(</span><span class="mi">10</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Millisecond</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="nx">stream</span><span class="p">.</span><span class="nx">Send</span><span class="p">(</span><span class="nx">taskBatch</span><span class="p">)</span>
+<span class="w">        </span><span class="nx">flowController</span><span class="p">.</span><span class="nx">sentTasks</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}()</span>
+
+<span class="c1">// Receiver goroutine</span>
+<span class="k">go</span><span class="w"> </span><span class="kd">func</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">result</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">stream</span><span class="p">.</span><span class="nx">Recv</span><span class="p">()</span>
+<span class="w">        </span><span class="nx">flowController</span><span class="p">.</span><span class="nx">receivedTasks</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="nb">int64</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">Messages</span><span class="p">)))</span>
+<span class="w">        </span><span class="nx">processResults</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}()</span>
+</code></pre></div>
+
+<h3 id="maxinflightbatchesperworker">MaxInflightBatchesPerWorker<a class="headerlink" href="#maxinflightbatchesperworker" title="Permanent link">&para;</a></h3>
+<p>Configure per-worker flow control:</p>
+<div class="codehilite"><pre><span></span><code><span class="nx">session</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">createSession</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">SessionAttributes</span><span class="p">{</span>
+<span class="w">    </span><span class="nx">MaxInflightBatchesPerWorker</span><span class="p">:</span><span class="w"> </span><span class="nx">proto</span><span class="p">.</span><span class="nx">Uint32</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span><span class="w">  </span><span class="c1">// Limit per worker</span>
+<span class="w">    </span><span class="nx">MaxWorkers</span><span class="p">:</span><span class="w">                  </span><span class="nx">proto</span><span class="p">.</span><span class="nx">Uint32</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="p">})</span>
+
+<span class="c1">// Effective max inflight = 5 * 100 = 500 batches</span>
+</code></pre></div>
+
+<h2 id="result-handling">Result Handling<a class="headerlink" href="#result-handling" title="Permanent link">&para;</a></h2>
+<h3 id="ordered-result-collection">Ordered Result Collection<a class="headerlink" href="#ordered-result-collection" title="Permanent link">&para;</a></h3>
+<p>Maintain task order:</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">type</span><span class="w"> </span><span class="nx">ResultCollector</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">results</span><span class="w">     </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Message</span>
+<span class="w">    </span><span class="nx">nextIndex</span><span class="w">   </span><span class="kt">int</span>
+<span class="w">    </span><span class="nx">orderedChan</span><span class="w"> </span><span class="kd">chan</span><span class="w"> </span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Message</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">rc</span><span class="w"> </span><span class="o">*</span><span class="nx">ResultCollector</span><span class="p">)</span><span class="w"> </span><span class="nx">collect</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">rc</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="nx">result</span><span class="p">.</span><span class="nx">Id</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">result</span>
+
+<span class="w">    </span><span class="c1">// Emit results in order</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">key</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Sprintf</span><span class="p">(</span><span class="s">&quot;task-%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">rc</span><span class="p">.</span><span class="nx">nextIndex</span><span class="p">)</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">result</span><span class="p">,</span><span class="w"> </span><span class="nx">ok</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">rc</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span><span class="w"> </span><span class="nx">ok</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">rc</span><span class="p">.</span><span class="nx">orderedChan</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nx">result</span>
+<span class="w">            </span><span class="nb">delete</span><span class="p">(</span><span class="nx">rc</span><span class="p">.</span><span class="nx">results</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">)</span>
+<span class="w">            </span><span class="nx">rc</span><span class="p">.</span><span class="nx">nextIndex</span><span class="o">++</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">break</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="streaming-result-processing">Streaming Result Processing<a class="headerlink" href="#streaming-result-processing" title="Permanent link">&para;</a></h3>
+<p>Process results as they arrive without buffering:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">go</span><span class="w"> </span><span class="kd">func</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">batch</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">stream</span><span class="p">.</span><span class="nx">Recv</span><span class="p">()</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">break</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">batch</span><span class="p">.</span><span class="nx">Messages</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Process immediately</span>
+<span class="w">            </span><span class="nx">processResult</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+
+<span class="w">            </span><span class="c1">// Stream to output (e.g., file, database)</span>
+<span class="w">            </span><span class="nx">writeToOutput</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}()</span>
+</code></pre></div>
+
+<h3 id="result-aggregation">Result Aggregation<a class="headerlink" href="#result-aggregation" title="Permanent link">&para;</a></h3>
+<p>Aggregate results incrementally:</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">type</span><span class="w"> </span><span class="nx">Aggregator</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">sum</span><span class="w">   </span><span class="kt">float64</span>
+<span class="w">    </span><span class="nx">count</span><span class="w"> </span><span class="kt">int64</span>
+<span class="w">    </span><span class="nx">mu</span><span class="w">    </span><span class="nx">sync</span><span class="p">.</span><span class="nx">Mutex</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="w"> </span><span class="o">*</span><span class="nx">Aggregator</span><span class="p">)</span><span class="w"> </span><span class="nx">add</span><span class="p">(</span><span class="nx">result</span><span class="w"> </span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="kt">float64</span>
+<span class="w">    </span><span class="nx">json</span><span class="p">.</span><span class="nx">Unmarshal</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">Payload</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">value</span><span class="p">)</span>
+
+<span class="w">    </span><span class="nx">a</span><span class="p">.</span><span class="nx">mu</span><span class="p">.</span><span class="nx">Lock</span><span class="p">()</span>
+<span class="w">    </span><span class="nx">a</span><span class="p">.</span><span class="nx">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">value</span>
+<span class="w">    </span><span class="nx">a</span><span class="p">.</span><span class="nx">count</span><span class="o">++</span>
+<span class="w">    </span><span class="nx">a</span><span class="p">.</span><span class="nx">mu</span><span class="p">.</span><span class="nx">Unlock</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="w"> </span><span class="o">*</span><span class="nx">Aggregator</span><span class="p">)</span><span class="w"> </span><span class="nx">mean</span><span class="p">()</span><span class="w"> </span><span class="kt">float64</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">a</span><span class="p">.</span><span class="nx">mu</span><span class="p">.</span><span class="nx">Lock</span><span class="p">()</span>
+<span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nx">a</span><span class="p">.</span><span class="nx">mu</span><span class="p">.</span><span class="nx">Unlock</span><span class="p">()</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="p">.</span><span class="nx">sum</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">float64</span><span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">count</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// Use in result processing</span>
+<span class="k">go</span><span class="w"> </span><span class="kd">func</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">batch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">stream</span><span class="p">.</span><span class="nx">Recv</span><span class="p">()</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">batch</span><span class="p">.</span><span class="nx">Messages</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">aggregator</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+
+<span class="w">            </span><span class="c1">// Report progress</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="nx">aggregator</span><span class="p">.</span><span class="nx">count</span><span class="o">%</span><span class="mi">1000</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">log</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Progress: %d tasks, mean: %.2f&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">aggregator</span><span class="p">.</span><span class="nx">count</span><span class="p">,</span><span class="w"> </span><span class="nx">aggregator</span><span class="p">.</span><span class="nx">mean</span><span class="p">())</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}()</span>
+</code></pre></div>
+
+<h2 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h2>
+<h3 id="retry-failed-tasks">Retry Failed Tasks<a class="headerlink" href="#retry-failed-tasks" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">submitWithRetry</span><span class="p">(</span><span class="nx">stream</span><span class="w"> </span><span class="nx">pb</span><span class="p">.</span><span class="nx">Queue_ClientStreamClient</span><span class="p">,</span><span class="w"> </span><span class="nx">task</span><span class="w"> </span><span class="nx">Task</span><span class="p">,</span><span class="w"> </span><span class="nx">maxRetries</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">error</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">attempt</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">attempt</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="nx">maxRetries</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">batch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Batch</span><span class="p">{</span>
+<span class="w">            </span><span class="nx">SessionId</span><span class="p">:</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">Messages</span><span class="p">:</span><span class="w">  </span><span class="p">[]</span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Message</span><span class="p">{{</span><span class="nx">Id</span><span class="p">:</span><span class="w"> </span><span class="nx">task</span><span class="p">.</span><span class="nx">ID</span><span class="p">,</span><span class="w"> </span><span class="nx">Payload</span><span class="p">:</span><span class="w"> </span><span class="nx">task</span><span class="p">.</span><span class="nx">Data</span><span class="p">}},</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">stream</span><span class="p">.</span><span class="nx">Send</span><span class="p">(</span><span class="nx">batch</span><span class="p">);</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">attempt</span><span class="o">++</span>
+<span class="w">            </span><span class="nx">time</span><span class="p">.</span><span class="nx">Sleep</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">Duration</span><span class="p">(</span><span class="nx">attempt</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span>
+<span class="w">            </span><span class="k">continue</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">nil</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Errorf</span><span class="p">(</span><span class="s">&quot;failed after %d retries&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">maxRetries</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="dead-letter-processing">Dead Letter Processing<a class="headerlink" href="#dead-letter-processing" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">processDeadLetters</span><span class="p">(</span><span class="nx">ctx</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">Context</span><span class="p">,</span><span class="w"> </span><span class="nx">client</span><span class="w"> </span><span class="nx">pb</span><span class="p">.</span><span class="nx">QueueClient</span><span class="p">,</span><span class="w"> </span><span class="nx">session</span><span class="w"> </span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Session</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">stream</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">ClientStreamDeadLetters</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span><span class="w"> </span><span class="nx">session</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Failed to open dead letter stream: %v&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">batch</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">stream</span><span class="p">.</span><span class="nx">Recv</span><span class="p">()</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">io</span><span class="p">.</span><span class="nx">EOF</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">break</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Dead letter stream error: %v&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">            </span><span class="k">break</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">msg</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">batch</span><span class="p">.</span><span class="nx">Messages</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Failed task %s: %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">msg</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span><span class="w"> </span><span class="nx">msg</span><span class="p">.</span><span class="nx">GetError</span><span class="p">())</span>
+
+<span class="w">            </span><span class="c1">// Analyze error and decide action</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="nx">isRetryable</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">GetError</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">retryTask</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">logPermanentFailure</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">isRetryable</span><span class="p">(</span><span class="nx">errorMsg</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Retryable errors</span>
+<span class="w">    </span><span class="nx">retryable</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="kt">string</span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;timeout&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;connection refused&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;temporary failure&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">pattern</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">retryable</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">strings</span><span class="p">.</span><span class="nx">Contains</span><span class="p">(</span><span class="nx">errorMsg</span><span class="p">,</span><span class="w"> </span><span class="nx">pattern</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="complete-example-parameter-sweep">Complete Example: Parameter Sweep<a class="headerlink" href="#complete-example-parameter-sweep" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;context&quot;</span>
+<span class="w">    </span><span class="s">&quot;encoding/json&quot;</span>
+<span class="w">    </span><span class="s">&quot;log&quot;</span>
+<span class="w">    </span><span class="s">&quot;sync&quot;</span>
+
+<span class="w">    </span><span class="nx">pb</span><span class="w"> </span><span class="s">&quot;github.com/limelabs/metalcore-neo/api/v1&quot;</span>
+<span class="w">    </span><span class="s">&quot;github.com/limelabs/metalcore-neo/pkg/grpccon&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">type</span><span class="w"> </span><span class="nx">ParameterSet</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Alpha</span><span class="w"> </span><span class="kt">float64</span>
+<span class="w">    </span><span class="nx">Beta</span><span class="w">  </span><span class="kt">float64</span>
+<span class="w">    </span><span class="nx">Gamma</span><span class="w"> </span><span class="kt">float64</span>
+<span class="p">}</span>
+
+<span class="kd">type</span><span class="w"> </span><span class="nx">SimulationResult</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Params</span><span class="w"> </span><span class="nx">ParameterSet</span>
+<span class="w">    </span><span class="nx">Score</span><span class="w">  </span><span class="kt">float64</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">ctx</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">Background</span><span class="p">()</span>
+
+<span class="w">    </span><span class="c1">// Connect</span>
+<span class="w">    </span><span class="nx">queueConn</span><span class="p">,</span><span class="w"> </span><span class="nx">queueClient</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">grpccon</span><span class="p">.</span><span class="nx">ConnectToQueue</span><span class="p">(</span><span class="s">&quot;localhost:1337&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span>
+<span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nx">queueConn</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
+
+<span class="w">    </span><span class="c1">// Create session</span>
+<span class="w">    </span><span class="nx">session</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">queueClient</span><span class="p">.</span><span class="nx">CreateSession</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Session</span><span class="p">{</span>
+<span class="w">        </span><span class="nx">App</span><span class="p">:</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">App</span><span class="p">{</span><span class="nx">Id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;parameter-sweep&quot;</span><span class="p">},</span>
+<span class="w">        </span><span class="nx">Attributes</span><span class="p">:</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">SessionAttributes</span><span class="p">{</span>
+<span class="w">            </span><span class="nx">Priority</span><span class="p">:</span><span class="w">    </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">MinWorkers</span><span class="p">:</span><span class="w">  </span><span class="mi">50</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">MaxWorkers</span><span class="p">:</span><span class="w">  </span><span class="mi">500</span><span class="p">,</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">    </span><span class="p">})</span>
+
+<span class="w">    </span><span class="c1">// Open stream</span>
+<span class="w">    </span><span class="nx">stream</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">queueClient</span><span class="p">.</span><span class="nx">ClientStream</span><span class="p">(</span><span class="nx">ctx</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c1">// Generate parameter combinations</span>
+<span class="w">    </span><span class="nx">params</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">generateParameterCombinations</span><span class="p">()</span>
+<span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Generated %d parameter sets&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">params</span><span class="p">))</span>
+
+<span class="w">    </span><span class="c1">// Send tasks</span>
+<span class="w">    </span><span class="k">go</span><span class="w"> </span><span class="kd">func</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">p</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">params</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">payload</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">json</span><span class="p">.</span><span class="nx">Marshal</span><span class="p">(</span><span class="nx">p</span><span class="p">)</span>
+<span class="w">            </span><span class="nx">batch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Batch</span><span class="p">{</span>
+<span class="w">                </span><span class="nx">SessionId</span><span class="p">:</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">Id</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">Messages</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Message</span><span class="p">{{</span>
+<span class="w">                    </span><span class="nx">Id</span><span class="p">:</span><span class="w">      </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Sprintf</span><span class="p">(</span><span class="s">&quot;param-%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">),</span>
+<span class="w">                    </span><span class="nx">Payload</span><span class="p">:</span><span class="w"> </span><span class="nx">payload</span><span class="p">,</span>
+<span class="w">                </span><span class="p">}},</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="nx">stream</span><span class="p">.</span><span class="nx">Send</span><span class="p">(</span><span class="nx">batch</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}()</span>
+
+<span class="w">    </span><span class="c1">// Collect results</span>
+<span class="w">    </span><span class="nx">results</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">([]</span><span class="nx">SimulationResult</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">params</span><span class="p">))</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">mu</span><span class="w"> </span><span class="nx">sync</span><span class="p">.</span><span class="nx">Mutex</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">params</span><span class="p">);</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">batch</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">stream</span><span class="p">.</span><span class="nx">Recv</span><span class="p">()</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">msg</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">batch</span><span class="p">.</span><span class="nx">Messages</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="nx">SimulationResult</span>
+<span class="w">            </span><span class="nx">json</span><span class="p">.</span><span class="nx">Unmarshal</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">Payload</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">result</span><span class="p">)</span>
+
+<span class="w">            </span><span class="nx">mu</span><span class="p">.</span><span class="nx">Lock</span><span class="p">()</span>
+<span class="w">            </span><span class="nx">results</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">results</span><span class="p">,</span><span class="w"> </span><span class="nx">result</span><span class="p">)</span>
+<span class="w">            </span><span class="nx">mu</span><span class="p">.</span><span class="nx">Unlock</span><span class="p">()</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">%</span><span class="mi">100</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">log</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Progress: %d/%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">params</span><span class="p">))</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Find best parameters</span>
+<span class="w">    </span><span class="nx">best</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">findBestResult</span><span class="p">(</span><span class="nx">results</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Best parameters: %+v, Score: %.4f&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">best</span><span class="p">.</span><span class="nx">Params</span><span class="p">,</span><span class="w"> </span><span class="nx">best</span><span class="p">.</span><span class="nx">Score</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c1">// Cleanup</span>
+<span class="w">    </span><span class="nx">queueClient</span><span class="p">.</span><span class="nx">CloseSession</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span><span class="w"> </span><span class="nx">session</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">generateParameterCombinations</span><span class="p">()</span><span class="w"> </span><span class="p">[]</span><span class="nx">ParameterSet</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">alphas</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">linspace</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">betas</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">linspace</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">gammas</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">linspace</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
+
+<span class="w">    </span><span class="nx">params</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nx">ParameterSet</span><span class="p">{}</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">alpha</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">alphas</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">beta</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">betas</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">gamma</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">gammas</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">params</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">params</span><span class="p">,</span><span class="w"> </span><span class="nx">ParameterSet</span><span class="p">{</span><span class="nx">alpha</span><span class="p">,</span><span class="w"> </span><span class="nx">beta</span><span class="p">,</span><span class="w"> </span><span class="nx">gamma</span><span class="p">})</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">params</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Task Granularity</strong>: Balance between too fine (overhead) and too coarse (load imbalance)</li>
+<li>Aim for tasks that take 1-10 seconds each</li>
+<li>
+<p>Adjust based on your workload characteristics</p>
+</li>
+<li>
+<p><strong>Batch Size</strong>: Larger batches = better throughput, smaller batches = lower latency</p>
+</li>
+<li>Start with 50-100 tasks per batch</li>
+<li>
+<p>Use adaptive batching for variable workloads</p>
+</li>
+<li>
+<p><strong>Resource Management</strong>: Configure sessions appropriately</p>
+</li>
+<li>Set realistic worker limits</li>
+<li>Use priority to manage multiple workloads</li>
+<li>
+<p>Enable cleanup for transient workloads</p>
+</li>
+<li>
+<p><strong>Error Handling</strong>: Always handle errors gracefully</p>
+</li>
+<li>Monitor dead letter queues</li>
+<li>Implement retry logic with backoff</li>
+<li>
+<p>Log failures for debugging</p>
+</li>
+<li>
+<p><strong>Monitoring</strong>: Track progress and performance</p>
+</li>
+<li>Log progress at regular intervals</li>
+<li>Monitor queue depths via metrics</li>
+<li>Measure end-to-end latency</li>
+</ol>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong><a href="../shared-data/">Using Shared Data</a></strong>: Optimize data distribution</li>
+<li><strong><a href="../error-handling/">Error Handling</a></strong>: Advanced error patterns</li>
+<li><strong><a href="../../reference/api/">API Reference</a></strong>: Complete API documentation</li>
+<li><strong><a href="../../examples/monte-carlo/">Examples</a></strong>: Real-world examples</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Lime Labs GmbH. All rights reserved. – <a href="#__consent">Change cookie settings</a>
+
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to serve analytics and improve the documentation experience. By accepting, you allow us to collect usage data; you can always revoke your choice.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.sections", "content.code.copy", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
