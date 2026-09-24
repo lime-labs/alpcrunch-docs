@@ -1,0 +1,16 @@
+/* the logo is black text on a transparent background, so the dark scheme's black header needs it
+   inverted to white */
+[data-md-color-scheme="slate"] .md-logo img {
+  filter: invert(1);
+}
+
+/* the theme shows the logo 1.2rem tall, too small to read the tagline under the wordmark. 2rem with
+   the button's padding and margin trimmed keeps the header at its 2.4rem height. */
+.md-header__button.md-logo {
+  margin: 0;
+  padding: 0.2rem;
+}
+
+.md-header__button.md-logo img {
+  height: 2rem;
+}
